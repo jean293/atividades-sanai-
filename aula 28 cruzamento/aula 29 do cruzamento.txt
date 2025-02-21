@@ -1,0 +1,46 @@
+/*
+autor: adrian alexandre
+nome do programa: Cruzamento
+data: 20/02/2025
+*/
+
+#define pinLedVermelho 13
+#define pinLedAmarelo 12
+#define pinLedVerde 11
+#define pinLedVerde2 2
+#define pinLedAmarelo2 3
+#define pinLedVermelho2 4
+
+void setup ()
+{
+  pinMode (pinLedVermelho, OUTPUT);
+  pinMode (pinLedVerde, OUTPUT);
+  pinMode (pinLedAmarelo, OUTPUT);
+  pinMode (pinLedVermelho2, OUTPUT);
+  pinMode (pinLedVerde2, OUTPUT);
+  pinMode (pinLedAmarelo2, OUTPUT);
+}
+
+void loop ()
+{
+  digitalWrite(pinLedVermelho2, HIGH);
+  digitalWrite(pinLedVerde, HIGH);           
+  delay(3000);
+  digitalWrite(pinLedVerde, LOW);
+
+  digitalWrite(pinLedAmarelo, HIGH);
+  delay(2000);
+  digitalWrite(pinLedAmarelo, LOW);
+  digitalWrite(pinLedVermelho, LOW);
+  digitalWrite(pinLedVermelho2, LOW);
+
+  digitalWrite(pinLedVermelho, HIGH);
+  digitalWrite(pinLedVerde2, HIGH); 
+  delay(3000);
+  digitalWrite(pinLedVerde2, LOW); 
+
+  digitalWrite(pinLedAmarelo2, HIGH);
+  delay(2000);
+  digitalWrite(pinLedAmarelo2, LOW);
+  digitalWrite(pinLedVermelho, LOW);
+}
