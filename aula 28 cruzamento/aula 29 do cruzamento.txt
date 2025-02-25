@@ -1,5 +1,5 @@
 /*
-autor: adrian alexandre
+autor: jean carlos
 nome do programa: Cruzamento
 data: 20/02/2025
 */
