@@ -1,0 +1,55 @@
+void setup()
+}
+  //***atividade 1****
+  
+Serial.begin(9600);
+int valor = 1000;
+int numeroA = 10;
+int numeroB = 3;
+int resultado = 0;
+float resultadoReal = 0;
+  
+  resultado = map(valor, 0, 1023, 0 100);
+  
+  Serial.println(resultado);
+  
+  resultado = contrain (resultado, 20, 80);
+    
+    //****atividede 2*****
+
+   Serial.println(contador);
+
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   Serial.println(++contador);
+   
+
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+   Serial.println(--contador);
+
+   //***atividade 3*****
+
+  float valor1 = 10;
+  float valor2 = 7;
+
+  float resultadoMedia =(valor1 + valor2 / 2.0;
+                         
+  Serial.println(resultadoMedia);
+   
+   
+{
