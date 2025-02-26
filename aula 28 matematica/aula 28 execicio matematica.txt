@@ -1,0 +1,37 @@
+/*
+ autor:jean carlos
+ nome:exercicio de matematica
+ data:26/02/25
+*/
+void setup()
+{
+  Serial.begin(9600);
+  
+  int peso = 92;
+  float altura = 1.85;
+  float resultadoReal = 0;
+  
+  resultadoReal = peso / sq (altura);
+  Serial.println(resultadoReal);
+  
+  if (resultadoReal < 19.1){
+  Serial.println("abaixo do peso");
+    
+  }else if (resultadoReal > 19.1 && resultadoReal <= 25.8){
+  Serial.println("peso normal");
+  
+  }else if (resultadoReal > 25.9 && resultadoReal <= 27.3){
+  Serial.println("pouco acima do peso");
+  
+  }else if (resultadoReal > 27.4 && resultadoReal <= 32.3){
+  Serial.print("acima do peso");
+  
+  }else if (resultadoReal >= 35 && resultadoReal < 39){
+  Serial.print("Obesidade");
+  
+  }else{
+  Serial.print("Obesidade de Grau 2");
+    
+  }
+  
+}
