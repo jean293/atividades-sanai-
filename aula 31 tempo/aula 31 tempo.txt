@@ -1,0 +1,77 @@
+/*
+autor:jean carlos
+data:6/03/25
+nome do arquivo:aula 31
+
+
+
+*/
+#define pinLedVermelho 13
+#define pinLedVerde 6
+#define pinLedAmarelo 12
+#define pinLedbranco 6
+#define pinLedLaranja 5
+#define pinLedazul 11
+
+void setup()
+{
+   Serial.begin(9600);
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedbranco, OUTPUT);
+  pinMode(pinLedLaranja, OUTPUT);
+  pinMode(pinLedVerde, OUTPUT);
+  pinMode(pinLedazul, OUTPUT);
+  pinMode(pinLedAmarelo, OUTPUT);
+  
+  
+  int clima = 4;
+  
+  
+  switch (clima)
+  {
+    
+  case 0:
+    
+  digitalWrite(pinLedVermelho, HIGH);
+  Serial.println("pessimo");
+  break;
+    
+    case 1:
+    
+  digitalWrite(pinLedVermelho, HIGH);
+  Serial.println("ruim");
+  break; 
+    
+    case 2:
+    
+  digitalWrite(pinLedVermelho, HIGH);
+  Serial.println("normal");
+  break;
+     
+    case 3:
+    
+  digitalWrite(pinLedVermelho, HIGH);
+  Serial.println("boa");
+  break;
+    
+    case 4:
+    
+    
+  digitalWrite(pinLedVermelho, HIGH);
+  Serial.println("excelente");
+  break;
+    
+    default:
+    
+    digitalWrite(pinLedbranco, HIGH);
+    
+    break;
+  }
+ 
+}
+
+
+void loop()
+{
+ 
+}
