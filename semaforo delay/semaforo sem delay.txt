@@ -1,0 +1,68 @@
+/*
+autor:jean carlos
+nome:semaforo sem delay
+data:10/03/25
+*/
+
+
+#define pinLedVermelho 13
+#define pinLedAmarelo 11
+#define pinLedVerde 9
+
+#define tempoVermelho 5000
+#define tempoAmarelo 2000
+#define tempoVerde 3000
+unsigned long tempoInicial = 1000;
+int faseSemaforo = 0;
+
+
+
+void setup()
+{
+  pinMode(pinLedVermelho, OUTPUT);
+  pinMode(pinLedAmarelo, OUTPUT);
+  pinMode(pinLedVerde, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  unsigned long tempoAtual = millis();
+  
+  if(tempoAtual - tempoInicial >=1000)
+  {
+  faseSemaforo++;
+  tempoInicial = tempoAtual;
+  if(faseSemaforo == 10) faseSemaforo = 0;
+  Serial.println(faseSemaforo);
+}
+   
+ switch (faseSemaforo)
+ {
+   
+   case 0:
+   digitalWrite(pinLedVermelho, HIGH);
+   digitalWrite(pinLedAmarelo, LOW);
+   digitalWrite(pinLedVerde, LOW);
+   break;
+   
+   
+   case 5:
+   digitalWrite(pinLedVermelho, LOW);
+   digitalWrite(pinLedAmarelo, LOW);
+   digitalWrite(pinLedVerde, HIGH);
+   break;
+   
+   
+   
+   case  8:
+   digitalWrite(pinLedVermelho, LOW);
+   digitalWrite(pinLedAmarelo, HIGH);
+   digitalWrite(pinLedVerde, LOW);
+   break;
+     
+ }
+  
+  
+}
+      
