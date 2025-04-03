@@ -1,0 +1,56 @@
+/*
+autor:jean carlos
+nome: aula 50 funcao
+data:03/04/25
+*/
+
+
+#include <Arduino.h>
+#define pinLed 2
+#define pinBotao 5
+ const int pinbotao = 3;
+
+  void desligaLed(int);
+  void ligaLed(int);
+  void piscaLed(int, unsigned long);
+  int somaDeDoisNumeros(int, int);
+
+ void setup()
+{
+ pinMode(2, OUTPUT);
+ Serial.begin(9600);
+}
+
+void loop() 
+{
+  piscaLed(2, 1000);// faz o led ficar piscando e desligando  com tempo de um segundo no pino 2 
+  int resultadoDaSoma = somaDeDoisNumeros(4, 8);// soma o resultado dos dois numeros sendo 4 + 8
+  Serial.println( resultadoDaSoma ); // mostra no serial o resultado da soma 
+}
+
+ void ligaLed(int pin)
+{
+   digitalWrite(pin , HIGH); // liga o led definido no pino 2
+}
+
+ void desligaLed(int pin)//  e uma funcao fazia que retorna o led desligado
+ {
+    digitalWrite(pin, LOW);// desliga o led que esta definido no pino 2
+ }
+ 
+ void piscaLed(int pin, unsigned long tempo)// tambem funcao variavel que retorna o led declarado piscando
+ {
+    ligaLed(pin);// retorna um led ligado
+    delay(tempo);// o tempo declarado na variavel
+    desligaLed(pin);// retorna um led desligado
+    delay(tempo); //o tempo declarado na variavel
+ }
+ int somaDeDoisNumeros(int numeroA, int numeroB);// variavel que os dois numeros inteiros
+
+ {
+    int resultado = numeroA + numeroB;// uma variavel que soma os dois resultado 
+    return resultado;//variavel que retorna os dois resultados
+ }
+
+ 
+ 
